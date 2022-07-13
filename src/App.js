@@ -4,8 +4,6 @@ import Container from "react-bootstrap/Container";
 import SiteNavbar from "./components/Navbar";
 import SiteFooter from "./components/Footer";
 
-import "./App.css";
-
 function App() {
   const [allRecipes, setAllRecipes] = useState([]);
 
