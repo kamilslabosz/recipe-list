@@ -3,14 +3,14 @@
   }
   
   body {
-    background: #c7d36f;
+    background: #DFE8CC;
   }
   
   /* HEADER */
   
   .navbar,
   .dropdown-menu {
-    background-color: #9eb23b;
+    background-color: #CCD6A6;
   }
   
   .navbar {
@@ -30,12 +30,12 @@
   
   .dropdown-item:focus,
   .dropdown-item:hover {
-    background-color: #9eb23b;
+    background-color: #CCD6A6;
   }
   /* FOOTER */
   
   .footer {
-    background-color: #e0deca;
+    background-color: #F7EDDB;
     width: 100%;
     bottom: 0;
   }

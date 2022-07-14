@@ -22,7 +22,7 @@ function App() {
       <SiteNavbar />
       <Container className="p-3">
         <Container className="p-5 mb-4 bg-light rounded-3">
-          <h1 className="header">Welcome To React-Bootstrap</h1>
+          <h1 className="header">Add some recipes!</h1>
         </Container>
       </Container>
       <SiteFooter />
