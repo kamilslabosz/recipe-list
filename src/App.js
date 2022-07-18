@@ -3,11 +3,14 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import SiteNavbar from "./components/Navbar";
 import SiteFooter from "./components/Footer";
+import CreateArea from "./components/CreateArea";
+import Recipe from "./components/Recipe";
 
 function App() {
   const [allRecipes, setAllRecipes] = useState([]);
 
   function addRecipe(newRecipe) {
+    console.log(newRecipe);
     setAllRecipes((prevValues) => [...prevValues, newRecipe]);
   }
 
@@ -21,9 +24,22 @@ function App() {
     <div>
       <SiteNavbar />
       <Container className="p-3">
-        <Container className="p-5 mb-4 bg-light rounded-3">
-          <h1 className="header">Add some recipes!</h1>
-        </Container>
+        <CreateArea onAdd={addRecipe}/>
+        {allRecipes.map((recipeItem, index) => {
+            return (
+              <Container className="mb-4 bg-light rounded-3">
+              <Recipe
+                key={index}
+                id={index}
+                title={recipeItem.title}
+                preparation={recipeItem.preparation}
+                ingredients={recipeItem.ingredients}
+                onDelete={deleteRecipe}
+                />
+                </Container>
+              )
+          })}
+        
       </Container>
       <SiteFooter />
     </div>
